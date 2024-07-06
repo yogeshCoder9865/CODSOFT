@@ -1,0 +1,128 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff30;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.488);
+}
+
+.header.shrink {
+    background-color: #222;
+    padding: 5px 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.navigation.shrink {
+    padding: 10px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#logo h1 {
+    color: #FFD700;
+    text-shadow: 10px 5px 5px #0a0800;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+#logo img {
+    width: 80px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.ulist {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    text-wrap: nowrap;
+}
+
+.ulist li {
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.ulist li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.ulist button {
+    padding: 8px 10px;
+    background-color: #FFD700;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.3s ease;
+}
+
+.ulist button a {
+    text-decoration: none;
+    color: black;
+}
+
+.ulist button:hover {
+    box-shadow: 0 0 15px gold, 0 0 15px gold;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.ulist button:hover a {
+    color: gold;
+}
+
+.ulist li:hover {
+    background-color: rgba(0, 0, 0, 0.503);
+    transition: all 0.3s ease;
+}
+
+.ulist li:hover a {
+    color: #FFD700;
+    transition: all 0.3s ease;
+}
+
+.fa-solid {
+    padding-right: 10px;
+    color: orangered;
+}
+
+
