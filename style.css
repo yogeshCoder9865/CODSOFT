@@ -31,7 +31,7 @@ body {
     width: 20%;
     height: 80%;
     align-items: center;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 
 }
 
@@ -59,7 +59,7 @@ body {
 .container .ulist {
     display: flex;
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     justify-content: space-around;
     align-items: baseline;
     text-wrap: nowrap;
@@ -172,6 +172,8 @@ body {
     padding: 20px 100px 20px 100px;
     background-color: #ffffff28;
     column-gap: 10px;
+    position: relative;
+    height: 500px;
 }
 
 .hero .hero-child,
@@ -193,18 +195,59 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     animation-name: fadeInRight;
     padding: 10px;
     box-sizing: border-box;
+    /* position: relative; */
+
 }
 .hero .image-child img
 {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 
 }
+.hero-change {
+    position: absolute;
+    /* border: 2px solid yellow; */
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    animation: slidehero 9s infinite; /* Adjusted to 9s for 3 images */
+    overflow: hidden;
+}
+
+.hero-change:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-change:nth-child(2) {
+    animation-delay: 3s; /* Adjusted to 3s for the second image */
+}
+
+.hero-change:nth-child(3) {
+    animation-delay: 6s; /* Added for the third image */
+}
+
+@keyframes slidehero {
+    0% {
+        opacity: 0;
+    }
+    11.1% {
+        opacity: 1;
+    }
+    33.3% {
+        opacity: 1;
+    }
+    44.4% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 
 .hero .hero-child h1 {
@@ -467,52 +510,60 @@ body {
    object-fit:contain;
    /* height: auto; */
 }
-/* 
-.change
-{
+.change {
     position: absolute;
-    opacity: 0; 
-    transition: opacity 0.2s ease; 
-    animation: slideshow 6s infinite
+    /* border: 2px solid yellow; */
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    animation: slideshow 9s infinite;
+    overflow: hidden;
 }
+
 .change:nth-child(1) {
-    animation-delay: 0s; 
+    animation-delay: 0s;
 }
 
 .change:nth-child(2) {
-    animation-delay: 2s; 
+    animation-delay: 3s; 
+}
+
+.change:nth-child(3) {
+    animation-delay: 6s;
 }
 
 @keyframes slideshow {
     0% {
-        opacity: 0; 
+        opacity: 0;
     }
-    25% {
-        opacity: 1; 
+    11.1% {
+        opacity: 1;
     }
-    50% {
-        opacity: 1; 
+    33.3% {
+        opacity: 1;
     }
-    75% {
-        opacity: 0; 
+    44.4% {
+        opacity: 0;
     }
     100% {
-        opacity: 0; 
+        opacity: 0;
     }
-} */
+}
 
 .sec-6 .about-container 
 {
-   border: 2px solid yellow;
+   /* border: 2px solid yellow; */
    display: flex;
    flex-direction: row;
-   border: 2px solid white;
+   /* border: 2px solid white; */
    width: 100%;
    padding: 10px;
    align-items: center;
    /* justify-content: center; */
+   background-color: black;
    line-height: 100px;
-   height: auto;
+   height: 400px;
+   border-radius: 20px 20px 0px 0px;
+   backdrop-filter: blur(50%);
 }
 .sec-6 .about-container .about
 {
@@ -520,8 +571,8 @@ body {
    
     display: flex;
     flex-direction:column;
-    border: 2px solid white;
-    width: 70%;
+    /* border: 2px solid white; */
+    width: 60%;
     /* padding: 50px; */
     align-items: center;
     justify-content: center;
@@ -530,7 +581,7 @@ body {
 }
 .sec-6 .about-container .about h1
 {
-    color: white;
+    color: gold;
     font-weight: 900;
     font-size: 30px;
     text-transform: uppercase;
@@ -549,18 +600,21 @@ body {
 }
 .about-image
 {
-    border: 2px solid red;
-    width: auto;
-    height:70%;
+    /* border: 2px solid red; */
+    width: 40%;
+    height:100%;
     display: flex;
-    /* padding: 10px; */
+    /* padding: 10px; */position: relative;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    margin-left: 15px;
 }
 .about-image img
 {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border: 2px solid yellow;
+    object-fit:cover;
+    /* border: 2px solid yellow; */
 }
 .foot
 {
@@ -658,11 +712,11 @@ body {
         width: 50%;
     }
     
-    /* #logo img {
+    #logo img {
         object-fit: contain;
         height: auto;
         width: 50%;
-    } */
+    }
  }
     
  
